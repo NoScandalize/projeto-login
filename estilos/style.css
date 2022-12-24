@@ -115,8 +115,6 @@ div.campo > input:focus-within {
 div.campo > input::placeholder {
     color: #2b134bb4;
     font-size: .8em;
-    text-align: center;
-    padding-right: 45px;
 }
 
 form > input[type=submit] {
