@@ -8,14 +8,14 @@
 */
 
 * {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
 
 body, html {
-    background-color: #5f2c82;
+    background-color: #2b134b;
     height: 100vh;
     width: 100vw;
 }
@@ -30,13 +30,15 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
     overflow: hidden;
+
     background-color: white;
     width: 250px;
-    height: 515px;
+    height: 530px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.507);
+    
+    transform: translate(-50%,-50%);
     transition: width .5s, height .5s;
     transition-timing-function: ease;
 }
@@ -55,20 +57,32 @@ section#login > div#formulario {
 }
 
 div#formulario > h1 {
+    font-weight: bolder;
     text-align: center;
     margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #2b134b;
+    
 }
 
 div#formulario > p {
-    font-size: 0.8em;
+    font-weight: bolder;
+    font-size: 0.7em;
+    text-align: justify;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1.7px;
+    color: #2b134b;
 }
 
 form > div.campo {
     display: block;
-    background-color: #5f2c82;
+    background-color: #2b134b;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
+    border: 2px solid #2b134b;
     margin: 5px 0px;
 }
 
@@ -76,12 +90,40 @@ div.campo > label {
     display: none;
 }
 
+div.campo > span {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: hsla(153, 100%, 78%, 0.925);
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-12px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+}
+
+div.campo > input::placeholder {
+    color: #2b134bb4;
+    font-size: .8em;
+    text-align: center;
+    padding-right: 45px;
+}
+
 form > input[type=submit] {
     display: block;
     font-size: .8em;
     font-weight: 800;
     text-transform: uppercase;
-    font-family: 'Noto Sans', sans-serif;
     letter-spacing: 3px;
     width: 100%;
     height: 40px;
@@ -91,22 +133,18 @@ form > input[type=submit] {
     border-radius: 5px;
     border: 1px solid #2b134b;
     margin-top: 5px;
-    box-shadow: 1px 10px 40px -12px #00ff8052;
-    text-shadow: 0px 10px 40px -12px #4d2383;
+    cursor: pointer;
 }
 
 form > input[type=submit]:hover {
     background-color: #2b134b;
     color: #00ff88;
-    box-shadow: 0px 10px 40px -12px #4d2383;
-    text-shadow: 1px 10px 40px -12px #00ff805;
 }
 
 form > a.botao {
     display: block;
     text-align: center;
     font-size: 1em;
-    font-family: 'Noto Sans', sans-serif;
     margin-top: 5px;
     padding-top: 7px;
     width: 100%;
